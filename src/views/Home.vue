@@ -1,0 +1,352 @@
+<script setup>
+
+const angles = ['0', '30', '60', '90', '-60', '-30']
+
+const goToProject = () => {
+    // alert("project")
+    const el = document.getElementById('project');
+    el.scrollIntoView({behavior: "smooth"});
+}
+
+const goToContact = () => {
+    // alert("project")
+    const el = document.getElementById('contact');
+    el.scrollIntoView({behavior: "smooth"});
+}
+
+</script>
+
+<template>
+    <section id="hero" class="hero">
+        <div class="h-div" >
+            <h1 class="afrin-haque">Afrin Haque</h1>
+            <div class="buttons">
+                <button class="project-showcase button" v-on:click="goToProject">Projects Showcase</button>
+                <button class="get-in-touch button" v-on:click="goToContact">Get in Touch</button>
+            </div>
+        </div>
+        
+        <div style="width: 100%; height: 100%; display: flex; justify-content: center;">
+            <div class="decoration-1" ></div>
+            <div style="display: flex; width: 60%; justify-content: space-around;">
+                <div class="images"> 
+                    <div class="image"></div>
+                    <div class="image-2"></div>
+                </div>
+                <div class="image-3"></div>
+            </div>
+            
+            
+        </div>
+
+        <div class="decoration-2" style="display: flex; flex-direction: column; height: 100%; position: absolute; right: 0px; justify-content:flex-end; padding-bottom: 300px;">
+            <hr v-for="index in 6" :key="index" class="frame" :style="{'transform': 'rotate(' + angles[index] + 'deg)'}" />
+        </div>
+        
+    </section>  
+</template>
+
+<style scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+   .hero {
+        box-sizing: border-box;
+        width: 100%;
+        height: min-content; /* 800px */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 100px 100px 100px 100px;
+        background-color: #62929e;
+        min-height: 100vh;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: nowrap;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .h-div {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        /* border: solid 3px red; */
+        
+    }
+
+    .h-div-lg {
+        /* border: solid 13px #000000; */
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 810px) {
+        .hero {
+            flex-direction: column;
+            overflow: hidden;
+            padding: 50px 50px 50px 50px;
+            /* justify-content: space-between; */
+        }
+
+        .h-div {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 30%;
+            margin-bottom: 100px;            
+        }
+
+        .buttons {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .buttons {
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-showcase {
+            width: 100%;
+            margin-right: 0px !important;
+            margin-bottom: 20px;
+        }
+
+        /* .h-div-lg {
+            justify-content: flex-start;
+        } */
+        
+    }
+
+    .afrin-haque {
+        width: 100%;
+        height: auto; /* 70px */
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-word;
+        z-index: 1;
+        position: relative;
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Orelega One", sans-serif;
+        color: #000000;
+        font-size: 64px;
+        letter-spacing: 0em;
+        line-height: 1.1;
+        text-align: left;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+
+    .button {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: min-content; /* 174px */
+        height: min-content; /* 44px */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px 10px 20px;
+        background-color: #ffffff;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: nowrap;
+        gap: 10;
+        border-radius: 9999px;
+        font-size: 18px;
+        border: none;
+        outline: none;
+    }
+
+    
+
+    .project-showcase {
+        width: auto; /* 190px */
+        height: auto; /* 24px */
+        white-space: pre;
+        overflow: visible;
+        position: relative;
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Martian Mono", monospace;
+        background-color: #c6c5b9;
+        color: #000000;
+        margin-right: 20px;
+        padding: 10px 20px 10px 20px;
+        letter-spacing: 0em;
+        line-height: 1.5;
+    }
+
+    .get-in-touch {
+        flex-shrink: 0;
+        width: auto; /* 134px */
+        height: auto; /* 24px */
+        white-space: pre;
+        overflow: visible;
+        position: relative;
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Martian Mono", monospace;
+        color: #000000;
+        letter-spacing: 0em;
+        line-height: 1.5;
+        text-align: left;
+        background-color: #ffffff;
+        padding: 10px 20px 10px 20px;
+        z-index: 1;
+    }
+
+
+    .decoration-1 {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 578px;
+        height: 406px;
+        display: block;
+        overflow: hidden;
+        transform: rotate(-50deg);
+        z-index: 0;
+        position: absolute;
+        border-radius: 100%;
+        border: 1px solid #000000;
+
+    }
+
+
+
+    
+
+    .decoration-2 {
+        flex-shrink: 0;
+        width: 296px;
+        min-height: 296px;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    /* Define the continuous rotation animation */
+    @keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    }
+
+    /* .decoration-2:hover {
+        animation: rotate360 10s linear infinite; 
+        animation-play-state: paused;
+        transform-origin: 50% 67%;
+    } */
+
+    .frame {
+        width: 296px;
+        height: 0em;
+        display: block;
+        /* background-color: #000000; */
+        overflow: hidden;
+        position: absolute;
+        color: #000000;
+        border: solid 0.01em black;
+        z-index: 2;
+        aspect-ratio: 0.9966329966329966 / 1;
+        /* border-radius: 0px 0px 0px 0px; */
+        
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        left: 0%;
+    }
+
+    .image {
+        flex-shrink: 0;
+        height: 200px;
+        display: block;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        mix-blend-mode: luminosity;
+        overflow: hidden;
+        z-index: 10;
+        position: relative;
+        justify-self: start;
+        align-self: start;
+        aspect-ratio: 1 / 1;
+        background-image: url(../assets/image-1.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0px 200px 0px 0px;
+        margin-bottom: 40px;
+    }
+
+    .image-2 {
+        flex-shrink: 0;
+        height: 200px;
+        display: block;
+        background-color: #c6c5b9;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+        justify-self: start;
+        align-self: start;
+        aspect-ratio: 1 / 1;
+        border-radius: 200px 200px 0px 200px;
+    }
+
+    .image-3 {
+        height: 440px;
+        width: 215px;
+        min-width: 200px;
+        /* border: solid 5px red; */
+        -webkit-filter: grayscale(1);
+        mix-blend-mode: luminosity;        
+        overflow: hidden;
+        z-index: 10;
+        background-image: url(./../assets/keyboard.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0px 0px 0px 0px;
+        position: relative;
+        right: 0%;
+    }
+
+    @media only screen and (max-width: 810px) {
+        .images {
+            margin-right: 10px;
+        }
+
+        .image-3 {
+            margin-left: 10px;
+        }
+    }
+
+    
+
+    
+
+    
+
+</style>
