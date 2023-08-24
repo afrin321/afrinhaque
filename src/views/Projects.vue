@@ -181,7 +181,7 @@
     }
 
     .bg2 {
-        background-image: url(../assets/project2.png);
+        background-image: url(../assets/project4.png);
     }
 
     .bg3 {

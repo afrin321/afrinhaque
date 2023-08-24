@@ -10,7 +10,7 @@
         <h2 class="title">My Projects</h2>
         <h3 class="project-name">RoadStars</h3>
 
-        <img class="image" src="../../assets/project2.PNG" />
+        <!-- <img class="image" src="../../assets/project2.PNG" /> -->
 
         <div class="info">
             <span class="link">Project Link</span>
