@@ -1,7 +1,15 @@
 <script setup>
+import myFile from './../assets/AfrinHaque_CV.pdf';
 
 
-
+const downloadFile = () => {
+    const link = document.createElement('a');
+      link.href = myFile;
+      link.download = 'AfrinHaque_CV.pdf'; // Specify the desired filename for the downloaded file
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+}
 
 </script>
 
@@ -9,26 +17,29 @@
     <section id="contact" class="contact">
         <h2 class="get-in-touch">Let's Discuss Your Project</h2>
         <div class="divisions">
-            <form class="form">
-                <input class="input" type="email" placeholder="cto@google.com - Drop Your Email 📧" title="cto@google.com - Drop Your Email 📧" />
-                <input class="input" type="text" placeholder="Subject/Title - Tell Us Your Digital Dreams 🌈" title="Subject/Title - Tell Us Your Digital Dreams 🌈" />
-                <input class="input" placeholder="Write Your Message - Greetings from Earth! 🌍" title="Write Your Message - Greetings from Earth! 🌍" value="Hi!"/>
+            <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="fb785873-c1e6-4263-81da-67b01794ba87">
+                <input class="input" type="text" name="name" placeholder="Subject/Title - Tell Us Your Digital Dreams 🌈" title="" />
+                <input class="input" type="email" name="email" placeholder="cto@google.com - Drop Your Email 📧" title="cto@google.com - Drop Your Email 📧" />
+                
+                <input class="input" name="message" placeholder="Write Your Message - Greetings from Earth! 🌍" title="Write Your Message - Greetings from Earth! 🌍" value="Hi!"/>
+                <!-- <div class="h-captcha" data-captcha="true"></div> -->
                 <button class="send-btn" title="Way to go! (pun intended)">{{`Click to Transmit..`}}</button>
             </form>
             <div class="cv">                 
                 <!-- <button class="cv-btn">Get My CV <span>⚙️</span></button> -->
-                <p>📎 <span>Social Handles</span></p>
+                <!-- <p>📎 <span>Social Handles</span></p>
                 <span class="links">
                     <a>🔗 <i>LinkedIn</i></a>
                     <a>🔗 <i>GitHub</i></a>
                     <a>🔗 <i>Medium</i></a>
                     <a>🔗 <i>Insta</i></a>
                 </span>
-                <hr/>
+                <hr/> -->
                 <p>🌺 <span>Résumé</span></p>
                 <span class="links">
-                <a>🔗 <i>Web_Dev_CV</i></a>
-                <a>🔗 <i>Cyber_Security_CV</i></a>
+                <a @click="downloadFile">🔗 <i @click="downloadFile">Web_Dev_CV</i></a>
+                <a @click="downloadFile">🔗 <i @click="downloadFile">Cyber_Security_CV</i></a>
                 </span>
             </div>
         </div>

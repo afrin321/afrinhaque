@@ -9,10 +9,27 @@
     <section id="project" class="project">
         <h2 class="project-highlights">Project Highlights</h2>
         <div class="grid">
-            <div class="image bg1"></div>
-            <div class="image bg2"></div>
-            <div class="image bg3"></div>
-            <div class="image bg4"></div>
+            <div class="grid-item">
+                <a href="https://afrin321.github.io/roadstar.ui/" target="_blank">
+                    <div class="image bg3"></div>
+                </a>
+                <b style="margin-top: 20px;">Powershell Automate!</b>
+                <p>GitHub Repo for scaffolding automation</p>
+            </div>
+            <div  class="grid-item">
+                <a href="https://afrin321.github.io/roadstar.ui/" target="_blank">
+                <div class="image bg2"></div>
+            </a>
+                <b style="margin-top: 20px;">RoadStar UI</b>
+                <p>A UI interface booking vehicles.</p>
+            </div>
+            <div class="grid-item">
+                <a href="https://afrin321.github.io/dolami-coding-test-afrin-haque/" target="_blank">
+                    <div class="image bg3"></div>
+                </a>
+                <b style="margin-top: 20px;">AvaTown</b>
+                <p>E-commerce UI with pagination + filter</p>
+            </div>
         </div>
     </section>  
 </template>
@@ -20,6 +37,11 @@
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
    
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
     .project {
         box-sizing: border-box;
         flex-shrink: 0;
@@ -77,6 +99,17 @@
         grid-gap: 30px;
         padding: 0px 0px 0px 0px;
     }
+
+    .grid-item {
+        display: flex;
+        flex-direction: column;     
+        font-family: "Martian Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        justify-content: space-evenly;
+    }
+
+    
 
     @media only screen and (max-width: 1020px) {
 

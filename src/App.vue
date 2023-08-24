@@ -1,10 +1,4 @@
 <script setup>
-import Home from "./views/Home.vue"
-import Background from "./views/Background.vue"
-import Skills from "./views/Skills.vue"
-import Projects from "./views/Projects.vue"
-import Contact from "./views/Contact.vue"
-import FooterSec from "./views/Footer.vue"
 
 import { useRouter } from 'vue-router';
 
@@ -13,7 +7,10 @@ const router = useRouter();
 </script>
 
 <template>
-    <router-view></router-view>
+    <div>
+        <router-view></router-view>
+    </div>
+    
 </template>
 
 <style scoped>

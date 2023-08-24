@@ -7,12 +7,17 @@
 
 <template>
     <section id="background" class="background">
-        <div class="">
-            <div class="image"></div>
+        <div class="div-2">
+            <div class="image" title="Hi, this is me!"></div>
+            <h3 class="right">I truly believe in the transformative power of reading, learning, applying, and sharing knowledge!</h3>
         </div>
         <div>
             <h2 class="background-title">Background</h2>
-            <h3 class="right">Meet the software maestro with a knack for cybersecurity and 2 years of professional experience under their belt. Currently diving deep into the virtual world of network protection, our protagonist is sharpening their skills and building a diverse cyber repertory! </h3>
+            <h3 class="right">Hi! I'm Afrin, a passionate web developer exploring the diverse areas of tech. I find modern technology fascinating, how it transforms years of striving into an automated process within days. </h3>
+            <h3 class="right">Often, you will find me diving deep into an emerging tech field. Currently, I am dedicatedly studying cyber security, understanding how security works in the industry.</h3>
+            <h3 class="right">At this moment, I offer web development services including front-end development, api development and full-stack application building.</h3>
+            <h3 class="right">As the landscape of modern technologies grows increasingly intricate, I'm committed to investing time and effort into mastering emerging domains such as AI, data science, Blockchain, cloud computing, and DevOps.</h3>
+            
         </div>        
     </section>  
 </template>
@@ -20,6 +25,12 @@
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
    
+    .div-2 {
+        display: flex; 
+        flex-direction: column;
+        padding-right: 10%;
+        
+    }
     .background {
         
         box-sizing: border-box;
@@ -93,7 +104,7 @@
         text-align: left;
     }
 
-    .background > div {
+    .background > div:first {
         flex-basis: 50%;
     }
     .background > div:first-of-type {
@@ -113,7 +124,7 @@
         overflow: hidden;
         position: relative;
         aspect-ratio: 1 / 1;
-        background-image: url(../assets/light.jpg);
+        background-image: url(../assets/1666490187156.JPEG);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

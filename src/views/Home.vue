@@ -19,10 +19,11 @@ const goToContact = () => {
 <template>
     <section id="hero" class="hero">
         <div class="h-div" >
-            <h1 class="afrin-haque">Afrin Haque</h1>
+            <h1 class="afrin-haque bulge-onload">Afrin Haque, <b class="fade-in-text" >Software Engineer</b></h1>
+            <p class="brand-statement fade-in-text2">Exploring the Intersection of Web Development, Cybersecurity, and Emerging Technologies.</p>
             <div class="buttons">
-                <button class="project-showcase button" v-on:click="goToProject">Projects Showcase</button>
-                <button class="get-in-touch button" v-on:click="goToContact">Get in Touch</button>
+                <button class="project-showcase button" v-on:click="goToProject">Explore My Work</button>
+                <button class="get-in-touch button" v-on:click="goToContact">Connect With Me</button>
             </div>
         </div>
         
@@ -61,6 +62,7 @@ const goToContact = () => {
         min-height: 100vh;
         overflow: hidden;
         position: relative;
+        top: 0px;
         align-content: center;
         flex-wrap: nowrap;
         border-radius: 0px 0px 0px 0px;
@@ -69,7 +71,7 @@ const goToContact = () => {
     .h-div {
         display: flex;
         flex-direction: column;
-        flex-basis: 50%;
+        flex-basis: 55%;
         /* border: solid 3px red; */
         
     }
@@ -117,13 +119,17 @@ const goToContact = () => {
             margin-bottom: 20px;
         }
 
+        .brand-statement {
+            font-size: 34px !important;
+        }
+
         /* .h-div-lg {
             justify-content: flex-start;
         } */
         
     }
 
-    .afrin-haque {
+    .afrin-haque, .sub-intro {
         width: 100%;
         height: auto; /* 70px */
         white-space: pre-wrap;
@@ -135,15 +141,33 @@ const goToContact = () => {
         font-style: normal;
         font-family: "Orelega One", sans-serif;
         color: #000000;
-        font-size: 64px;
+        font-size: 24px;
         letter-spacing: 0em;
         line-height: 1.1;
         text-align: left;
     }
 
+    .brand-statement {
+        font-family: "Orelega One", sans-serif;
+        color: #000000;
+        font-size: 44px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-word;
+        z-index: 1;
+        position: relative;
+        font-weight: 400;
+        font-style: normal;
+        color:#fff;
+        white-space: pre-wrap;
+        text-shadow: 1px 1px black;
+
+    }
+
     .buttons {
         display: flex;
         justify-content: flex-start;
+        z-index: 1000;
     }
 
 
@@ -170,6 +194,19 @@ const goToContact = () => {
         outline: none;
     }
 
+    /* .decoration-2 {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    } */
+
     
 
     .project-showcase {
@@ -187,7 +224,10 @@ const goToContact = () => {
         padding: 10px 20px 10px 20px;
         letter-spacing: 0em;
         line-height: 1.5;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
     }
+
+  
 
     .get-in-touch {
         flex-shrink: 0;
@@ -206,6 +246,13 @@ const goToContact = () => {
         background-color: #ffffff;
         padding: 10px 20px 10px 20px;
         z-index: 1;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .get-in-touch:hover, .project-showcase:hover {
+        background-color: #000000;
+        color: #ffffff;
+        transform: scale(1.05);
     }
 
 
@@ -341,6 +388,88 @@ const goToContact = () => {
         .image-3 {
             margin-left: 10px;
         }
+    }
+
+    
+
+    /* .images .image, .image-2 {
+        animation: float 2s ease-in-out infinite;
+    }
+
+    .image-3 {
+        animation: floatreverse 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes floatreverse {
+        0%, 100% {
+            transform: translateY(-10px);
+        }
+        50% {
+            transform: translateY(0px);
+        }
+    } */
+
+    /* @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    #hero {
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+    } */
+
+    /* .decoration-2 {
+        animation: parallax 5s alternate infinite;
+    }
+
+    @keyframes parallax {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-20px);
+        }
+    } */
+
+    .fade-in-text {
+    animation: fadeInText 1s ease-in-out forwards;
+}
+
+    @keyframes fadeInText {
+        to {
+            text-shadow: 2px 2px #c6c5b9;
+            font-size: 24px;
+        }
+    }
+
+    .bulge-onload {
+        animation: bulgeName 1s ease-out;
+        transform-origin: center;
+    }
+
+    @keyframes bulgeName {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    .highlight {
+        color: #c6c5b9; /* Your desired color */
+        font-weight: bold;
     }
 
     
