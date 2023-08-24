@@ -340,7 +340,7 @@ const goToContact = () => {
         justify-self: start;
         align-self: start;
         aspect-ratio: 1 / 1;
-        background-image: url(../assets/image-1.JPG);
+        background-image: url(../assets/image-1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -371,7 +371,7 @@ const goToContact = () => {
         mix-blend-mode: luminosity;        
         overflow: hidden;
         z-index: 10;
-        background-image: url(./../assets/keyboard.JPG);
+        background-image: url(./../assets/keyboard.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

@@ -124,7 +124,7 @@
         overflow: hidden;
         position: relative;
         aspect-ratio: 1 / 1;
-        background-image: url(../assets/1666490187156.JPEG);
+        background-image: url(../assets/afrin.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
