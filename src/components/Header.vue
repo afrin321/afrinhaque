@@ -23,7 +23,7 @@ const goToContact = () => {
             <span><a href="https://github.com/afrin321" target="_blank">@GitHub</a></span>
             <span><a href="https://www.linkedin.com/in/afrin-haque-dev/" target="_blank">@LinkedIn</a></span>
         </div>
-        <div style="display: flex; justify-content: flex-end; margin-left: 120px;">
+        <div >
             <span v-on:click="() => goToProject()">Project Showcase</span>
             <span v-on:click="() => goToContact()">Contact</span>
         </div>
@@ -61,12 +61,47 @@ const goToContact = () => {
         color: #393d3f;
     }
 
+    header > div:last-of-type {
+        display: flex; 
+        justify-content: flex-end; 
+        margin-left: 120px;
+    }
+
     
 
     @media only screen and (max-width: 810px) {
         header {
-            display: none;
+            display: flex;
+            position: fixed;
+            top: 0px;
+            height: min-content;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0px;
+
         }
+
+        header > div:first {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        header > div:last-of-type {
+            display: none;
+            /* justify-content:flex-start;
+            width: 100%;
+            margin: auto; */
+        }
+
+        span {
+            margin-right: auto;
+            padding: 10px 10px !important;
+            cursor: pointer;
+            text-decoration: none;
+            color: #393d3f;
+         }
     }
 
 

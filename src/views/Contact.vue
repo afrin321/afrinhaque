@@ -1,259 +1,234 @@
 <script setup>
-import myFile from './../assets/AfrinHaque_CV.pdf';
+// import myFile from './../assets/AfrinHaque_CV.pdf';
 
 
-const downloadFile = () => {
-    const link = document.createElement('a');
-      link.href = myFile;
-      link.download = 'AfrinHaque_CV.pdf'; // Specify the desired filename for the downloaded file
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-}
+// const downloadFile = () => {
+//     const link = document.createElement('a');
+//       link.href = myFile;
+//       link.download = 'AfrinHaque_CV.pdf'; // Specify the desired filename for the downloaded file
+//       document.body.appendChild(link);
+//       link.click();
+//       document.body.removeChild(link);
+// }
 
 </script>
 
 <template>
-    <section id="contact" class="contact">
-        <h2 class="get-in-touch">Let's Discuss Your Project</h2>
-        <div class="divisions">
-            <form class="form" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="fb785873-c1e6-4263-81da-67b01794ba87">
-                <input class="input" type="text" name="name" placeholder="Subject/Title - Tell Us Your Digital Dreams 🌈" title="" />
-                <input class="input" type="email" name="email" placeholder="cto@google.com - Drop Your Email 📧" title="cto@google.com - Drop Your Email 📧" />
-                
-                <input class="input" name="message" placeholder="Write Your Message - Greetings from Earth! 🌍" title="Write Your Message - Greetings from Earth! 🌍" value="Hi!"/>
-                <!-- <div class="h-captcha" data-captcha="true"></div> -->
-                <button class="send-btn" title="Way to go! (pun intended)">{{`Click to Transmit..`}}</button>
-            </form>
-            <div class="cv">                 
-                <!-- <button class="cv-btn">Get My CV <span>⚙️</span></button> -->
-                <!-- <p>📎 <span>Social Handles</span></p>
-                <span class="links">
-                    <a>🔗 <i>LinkedIn</i></a>
-                    <a>🔗 <i>GitHub</i></a>
-                    <a>🔗 <i>Medium</i></a>
-                    <a>🔗 <i>Insta</i></a>
-                </span>
-                <hr/> -->
-                <p>🌺 <span>Résumé</span></p>
-                <span class="links">
-                <a @click="downloadFile">🔗 <i @click="downloadFile">Web_Dev_CV</i></a>
-                <a @click="downloadFile">🔗 <i @click="downloadFile">Cyber_Security_CV</i></a>
-                </span>
+    <div class="app">
+      <!-- ... Other sections ... -->
+  
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="content">
+          <div class="contact-content">
+            <div class="about-me">
+              <div class="circle-image">
+                <img src="./../assets/afrin.jpeg" alt="Profile Photo">
+              </div>
+              <h2 class="section-title animation">About Me</h2>
+              <div class="tech-hashtags">💻 TechGeek 👁️‍🗨️ INFP-T 📚 Bookworm 🍵 TeaConnoisseur</div>
+              <div class="value-proposition animation">
+                <p>
+                  Hey there! I'm Afrin Haque, a passionate software engineer with a keen interest in web development,
+                  cyber security, and emerging technologies. I enjoy building innovative solutions that merge elegant design
+                  with robust functionality. My journey involves continuous learning and exploration to stay updated with
+                  the dynamic tech landscape. Let's connect and discuss how we can collaborate on exciting projects!
+                </p>
+              </div>
+              <div class="resume-button">
+                <a href="/path-to-your-resume.pdf" download>
+                  <button class="download-button">Download Resume 📄</button>
+                </a>
+              </div>
             </div>
+            <div class="contact-form">
+              <h2 class="section-title animation">Contact</h2>
+              <form>
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Your Message" class="form-input" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="send-button">Send</button>
+              </div>
+            </form>
+            </div>
+          </div>
         </div>
-    </section>  
-</template>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+      </section>
+    </div>
+    
+  </template>
+  
 
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
    
-
-   .contact {
-        box-sizing: border-box;
-        width: 100%;
-        height: min-content; /* 800px */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 100px 100px 100px 100px;
-        background-color: #62929e;
-        min-height: 100vh;
-        overflow: hidden;
-        position: relative;
-        align-content: flex-start;
-        flex-wrap: nowrap;
-        border-radius: 0px 0px 0px 0px;
-   }
-
-   .get-in-touch {
-        flex-shrink: 0;
-        width: 100%;
-        height: auto; /* 58px */
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        word-break: break-word;
-        /* max-width: 1000px; */
-        overflow: visible;
-        position: relative;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Orelega One", sans-serif;
-        color: #393d3f;
-        font-size: 48px;
-        letter-spacing: 0em;
-        line-height: 1.2;
-        text-align: left;
-   }
-
-   .divisions {
-        display: flex;
-        width: 100%;
-
-
-   }
-
-   .form {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 50%;
-        width: 100%;
-        align-items: center;
-   }
-
-   .input {
-        width: 100%;
-        height: 50px;
-        border: none;
-        outline: none;
-        border-radius: 100px;
-        margin: 10px auto;
-        text-indent: 1em;
-        padding: 8px 12px;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Martian Mono", monospace;
-        color: #000000;
-        font-size: 16px;
-   }
-
-   .send-btn {
-        font-weight: 400;
-        font-style: normal;
-        font-family:  "Martian Mono", monospace;
-        background-color: #393d3f;
-        text-align: center;
-        font-size: 16px;
-        outline: none;
-        border: none;
-        border-radius: 40px 0px 40px 0px;
-        width: 60%;
-        min-height: 50px;
-        padding: 12px 22px;
-        color: azure;
-        margin: 20px 50px;
-   }
-
-   .cv {
-        display: flex;
-        justify-content: flex-start;
-        align-items: left;
-        padding-left: 20%;
-        flex-basis: 50%;
-        height: auto;
-        flex-direction: column;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Martian Mono", monospace;
-        color: azure;
-       
-        /* border: solid 2px red; */
-   }
-
-   .cv > p {
-    font-size: 22px;
-
     
-   }
-
- 
-
-   .cv > p > span {
-    text-decoration: underline;
-    text-decoration-color: lavenderblush;
-    text-decoration-thickness: 4;
-   }
-
-   .cv > span > a {
-    padding-right: 5px;
-    padding-bottom: 3px;
-   }
-   .cv > span > a:hover, a:active {
-    /* text-decoration: underline;
-    text-decoration-color: #393d3f;
-    text-decoration-thickness: 5px;
-    text-decoration-skip: 2; */
-    background: #393d3f;
-    /* border-bottom: 3px solid #393d3f; */
-    color: white;
-    width: fit-content;
-    
-    
-    
-   }
-
-   .links {
-    width: 100%;
-    /* border: solid 2px red; */
-    display: flex;
-    justify-content: space-evenly;
-   }
-   
-   
-
-   .cv > a:hover, a:active > i {
-    /* text-decoration: underline;
-    text-decoration-color: lavenderblush;
-    text-decoration-thickness: 2; */
-   }
-
-   .cv-btn {
-        height: auto;
-        width: auto;
-        outline: none;
-        border: none;
-        padding: 20px 22px 20px 22px;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Martian Mono", monospace;
-        background: #393d3f;
-        color: #62929e;
-        font-size: 20px;
-        border-radius: 10px;
-        /* background: transparent; */
-       
-   }
-
-   @media only screen and (max-width: 810px) {
+    .tech-hashtags {
+      margin-top: 10px;
+      font-size: 14px;
+      color: magenta;
+      text-align: center;
+      font-family: "Martian Mono", monospace;
+    }
+    .section-title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #fff;
+        text-shadow: 1px 1px magenta;
+    }
     .contact {
-        padding: 40px;
-        justify-content: center;
-        align-items: center;
-    }
+  background-color: #0d1b2a;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Orelega One", sans-serif;
+}
 
-    .divisions {
-        flex-direction: column;
-    }
+.contact-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
 
-    .send-btn {
-        width: 90%;
-    }
+.about-me,
+.contact-form {
+  flex: 1;
+  padding: 0 80px;
+}
 
-    .input::placeholder {
-      white-space: normal;
-      line-height: 1.2;
-    }
+.about-me .circle-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 
-    .cv {
-        padding-top: 20px;
-        padding-left: 5%;
-    }
+.about-me .circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .links {
-        width: 100%;
-        /* border: solid 2px red; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
+/* Styles for the About Me section */
+.about-me .section-title,
+.contact-form .section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 1px 1px magenta;
+}
 
-    
-   }
+.about-me .value-proposition p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
 
-   
-   
+/* Styles for the Contact Form */
+.contact-form form {
+  padding: auto 150px 50px 150px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c6c5b9;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.form-input::placeholder {
+  color: #c6c5b9;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: magenta;
+}
+
+textarea.form-input {
+  height: 150px;
+  resize: vertical;
+}
+
+.send-button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-link {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: magenta;
+}
+
+.resume-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-button {
+  background-color: #1a2937;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.download-button:hover {
+  background-color: #0d1b2a;
+}
+
+
 
 
 

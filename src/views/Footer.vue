@@ -7,10 +7,8 @@
 
 <template>
     <footer class="footer">
-        <span>🖱️</span>
-        <p class="all-rights-reserved_">All rights reserved.</p>
-        <p class="generated-on">Generated on Saturday, July 22, 2023</p>
-    </footer> 
+      <p>&copy; 2023 Afrin Haque. All rights reserved. 💪</p>
+    </footer>
 </template>
 
 <style scoped>
@@ -18,55 +16,11 @@
    
 
     .footer {
-        box-sizing: border-box;
-        flex-shrink: 0;
-        width: 100%;
-        height: min-content; /* 418px */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 100px 100px 100px 100px;
-        background-color: #fdfdff;
-        overflow: hidden;
-        /* flex: 1 0 0px; */
-        position: relative;
-        align-content: center;
-        flex-wrap: nowrap;
-        gap: 5;
-        border-radius: 0px 0px 0px 0px;
-    }
-
-    .all-rights-reserved_ {
-        flex-shrink: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Martian Mono", monospace;
-        color: #000000;
-        font-size: 16px;
-        letter-spacing: 0em;
-        line-height: 1.5;
+        background-color: #1a2937;
+        color: #c6c5b9;
         text-align: center;
-    }
-
-    .generated-on {
-        flex-shrink: 0;
-        height: auto;
-        overflow: hidden;
-        position: relative;
-        opacity: 0.5;
-        font-weight: 400;
-        font-style: normal;
+        padding: 20px;
         font-family: "Martian Mono", monospace;
-        color: #000000;
-        font-size: 16px;
-        letter-spacing: 0em;
-        line-height: 1.5;
-        text-align: center;
     }
    
 

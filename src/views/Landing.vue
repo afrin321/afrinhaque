@@ -1,23 +1,25 @@
 <script setup>
-import Home from "./Home.vue"
-import Background from "./Background.vue"
+import Home from "./NewHome.vue"
+import Emerging from "./EmergingTech.vue"
 import Skills from "./Skills.vue"
 import Projects from "./Projects.vue"
 import Contact from "./Contact.vue"
 import FooterSec from "./Footer.vue"
 import Header from "../components/Header.vue"
-
+import Webdevelopment from "./Webdevelopment.vue"
+import Cybersecurity from "./Cybersecurity.vue"
 
 </script>
 
 <template>
     <div class="container">
-        <Header />
+        <!-- <Header /> -->
         <main>
             <Home/>
-            <Background />
-            <Skills />
+            <Webdevelopment/>
+            <Cybersecurity />
             <Projects />
+            <Emerging />
             <Contact />
             <FooterSec />
         </main>

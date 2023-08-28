@@ -20,7 +20,7 @@ const goToContact = () => {
     <section id="hero" class="hero">
         <div class="h-div" >
             <h1 class="afrin-haque bulge-onload">Afrin Haque, <b class="fade-in-text" >Software Engineer</b></h1>
-            <p class="brand-statement fade-in-text2">Exploring the Intersection of Web Development, Cybersecurity, and Emerging Technologies.</p>
+            <p class="brand-statement">Exploring the Intersection of Web Development, Cybersecurity, and Emerging Technologies.</p>
             <div class="buttons">
                 <button class="project-showcase button" v-on:click="goToProject">Explore My Work</button>
                 <button class="get-in-touch button" v-on:click="goToContact">Connect With Me</button>
@@ -32,9 +32,13 @@ const goToContact = () => {
             <div style="display: flex; width: 60%; justify-content: space-around;">
                 <div class="images"> 
                     <div class="image"></div>
-                    <div class="image-2"></div>
+                    <div class="image-2">
+                        
+                    </div>
                 </div>
-                <div class="image-3"></div>
+                <div class="image-3">
+                    In the dynamic landscape of software engineering, the fusion of front-end prowess and JavaScript expertise powers microservices architecture, shifting from monolithic structures towards cloud-native paradigms. The vigilance of OWASP WSTG and ISO 27001 certification ensures ironclad security. Agile methodologies, Jira, and Confluence streamline user stories, while DevOps, Docker, and CI/CD pipelines orchestrate seamless deployment. Python, R, and TensorFlow orchestrate AI and data science, harmonizing machine learning insights. As software engineering advances, responsive UIs, CSS artistry, and web designs captivate users, propelling innovation through a symphony of technologies.
+                </div>
             </div>
             
             
@@ -120,7 +124,7 @@ const goToContact = () => {
         }
 
         .brand-statement {
-            font-size: 34px !important;
+            font-size: 18px !important;
         }
 
         /* .h-div-lg {
@@ -378,6 +382,47 @@ const goToContact = () => {
         border-radius: 0px 0px 0px 0px;
         position: relative;
         right: 0%;
+
+        
+        color: #ffffff;
+        font-family: "Martian Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .image-4 {
+        height: 440px;
+        width: 215px;
+        min-width: 200px;
+        /* border: solid 5px red; */
+        -webkit-filter: grayscale(1);
+        mix-blend-mode: luminosity;    
+        z-index: 11;
+        /* background-image: url(./../assets/keyboard.jpg); */
+        background: #c6c5b9;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0px 0px 0px 0px;
+        position: relative;
+        left: -180px;
+        top: 20px;
+        opacity: 0.8;
+
+        /* padding: 10px 20px;
+        color: #ffffff;
+        font-family: "Martian Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        overflow: auto; */
+    }
+
+    .image-3 > p {
+        position: relative;
+        width: 215px;
+        min-width: 200px;
+        z-index: 20;
+        padding: 2px;
     }
 
     @media only screen and (max-width: 810px) {
